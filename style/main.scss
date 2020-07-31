@@ -1,0 +1,87 @@
+@import "./partial/normalize";
+@import "./partial/variable";
+@import "./partial/mixin";
+@import "./partial/font";
+
+html {
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family-regular, sans-serif;
+  color: $text-color;
+  font-size: 16px;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// Utility class that can be extended
+.container {
+  max-width: $desktop-bp;
+  margin: 0 auto;
+}
+
+.regular {
+  font-family: $font-family-regular;
+}
+
+.demi {
+  font-family: $font-family-demi;
+}
+
+.bold {
+  font-family: $font-family-bold;
+}
+
+main {
+  background-image: url(../asset/image/meta-studio-35-nAZclJcY0GU-unsplash.jpg);
+  // background-image: url(../asset/image/rostyslav-savchyn-szqj9gIy_YM-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100vw;
+  height: 100vh;
+}
+
+.apod__wrapper {
+  padding-top: 25px;
+  text-align: center;
+  @include tablet {
+  }
+}
+
+.apod__img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  @include tablet {
+    margin-top: 50px;
+    width: 450px;
+    height: 450px;
+  }
+}
+
+.apod__article {
+  width: 75%;
+  height: 250px;
+  margin: 0 auto;
+  opacity: 50%;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+  overflow: scroll;
+  @include tablet {
+    margin-top: 70px;
+    width: 50%;
+    font-size: 25px;
+    line-height: 30px;
+    height: 350px;
+  }
+}

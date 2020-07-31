@@ -1,0 +1,13 @@
+@import "./variable";
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-bp) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-bp) {
+    @content;
+  }
+}
